@@ -41,3 +41,15 @@ nav {
 .flex {
   display: flex;
 }
+
+/*****************
+FOOTER SECTION
+*****************/
+
+.footerElem {
+  background-color: whitesmoke;
+}
+
+.footerText {
+  text-align: center;
+}

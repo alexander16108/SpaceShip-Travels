@@ -29,6 +29,15 @@ const populate = () => {
 
   navLi.append(li1, li2);
 
+
+  //footer
+  const footerElem = newElem('footer');
+  footerElem.classList.add('footer');
+  
+  const footerText = newElem('p');
+  footerText.innerText = 'Created by Sneeu and Alexander under MiT licence';
+  footerText.classList.add('footerText')
+  footerElem.append(p);
 };
 
 document.addEventListener('DOMContentLoaded', populate);
