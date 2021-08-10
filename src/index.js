@@ -1,7 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
 import Logo from './pokeLogo.png';
-import { newElem, newDiv, grab } from './support.js';
+import { newElem, grab } from './support.js';
+import getPokemon from './api.js';
+import displayPokemon from './display.js';
 
 const populate = () => {
   // logo
@@ -51,5 +54,18 @@ const populate = () => {
   foot.append(footLi);
 };
 
-document.addEventListener('DOMContentLoaded', populate);
+const pokemon = [];
 
+document.addEventListener('DOMContentLoaded', async () => {
+  pokemon.push(
+    await getPokemon(6),
+    await getPokemon(7),
+    await getPokemon(25),
+    await getPokemon(52),
+    await getPokemon(79),
+    await getPokemon(95),
+  );
+  displayPokemon(pokemon);
+});
+
+document.addEventListener('DOMContentLoaded', populate);

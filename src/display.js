@@ -1,4 +1,4 @@
-import {newElem, newDiv, grab} from './src/support.js'
+import { newElem, newDiv, grab } from './support.js';
 
 class PokemonContainer {
   constructor(pokemonImage, pokemonName, pokemonLikes, pokemonId) {
@@ -28,16 +28,11 @@ class PokemonContainer {
     likeButton.classList.add('far', 'fa-heart');
 
     const infoDiv = newDiv;
-    infoDiv.classList.add('flex', 'justify-between',
-      'align-items-baseline',
-      'mt-2',
-    );
+    infoDiv.classList.add('flex', 'info-div-align');
     infoDiv.append(pokemonName, likeButton);
     const commentButton = newElem('button');
-    commentButton.classList.add('mt-2');
+    commentButton.classList.add('m-top-1');
     commentButton.innerText = 'Comment';
-
-    // commentButton.addEventListener('click', this.gotoCommentPage);
 
     container.append(pokemonImg, infoDiv, numLikes, commentButton);
     PokeDisplay.append(container);
@@ -56,5 +51,4 @@ const displayPokemon = (pokes) => {
   });
 };
 
-module.exports = { displayPokemon };
-
+export default { displayPokemon };

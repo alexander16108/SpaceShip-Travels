@@ -42,10 +42,26 @@ nav {
   display: flex;
 }
 
+.info-div-align {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .m-left-1 {
   margin-left: 1rem;
 }
 
+.m-bot-1 {
+  margin-bottom: 1rem;
+}
+
+.m-right-1 {
+  margin-right: 1rem;
+}
+
+.m-top-1 {
+  margin-top: 1rem;
+}
 /*****************
 FOOTER SECTION
 *****************/
