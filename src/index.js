@@ -29,15 +29,29 @@ const populate = () => {
 
   navLi.append(li1, li2);
 
+  // footer
 
-  //footer
-  const footerElem = newElem('footer');
-  footerElem.classList.add('footer');
-  
+  const foot = grab('foot-anchor');
+  foot.classList.add('footer');
+
+  const footLi = newElem('ul');
+  footLi.classList.add('flex', 'list-style', 'footerText');
+
+  const fLi1 = newElem('li');
+  const footI = newElem('i');
+  footI.classList.add('far', 'fa-copyright');
+
+  fLi1.append(footI);
+
+  const fLi2 = newElem('li');
+  fLi2.classList.add('m-left-1');
   const footerText = newElem('p');
-  footerText.innerText = 'Created by Sneeu and Alexander under MiT licence';
-  footerText.classList.add('footerText')
-  footerElem.append(p);
+  footerText.innerText = 'Created by Stephan and Alexander';
+  footerText.classList.add('footerText');
+  fLi2.append(footerText);
+
+  footLi.append(fLi1, fLi2);
+  foot.append(footLi);
 };
 
 document.addEventListener('DOMContentLoaded', populate);
