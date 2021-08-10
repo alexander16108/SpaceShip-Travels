@@ -1,10 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Logo from './pokeLogo.png';
-
-const newElem = (elem) => document.createElement(elem);
-const newDiv = () => document.createElement('div');
-const grab = (elem) => document.getElementById(elem);
+import { newElem, newDiv, grab } from './support.js';
 
 const populate = () => {
   // logo
@@ -55,3 +52,4 @@ const populate = () => {
 };
 
 document.addEventListener('DOMContentLoaded', populate);
+
