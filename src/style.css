@@ -9,9 +9,33 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
+nav {
+  background-color: rgb(70, 70, 70);
+}
+
+#logoImg {
+  margin: 1rem 1.6rem;
+  
+  height: 6rem;
+  width: 11rem;
+}
+
 .logo {
-  height: 5rem;
-  width: 7rem;
+  width: 35%;
+}
+
+.info {
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.nav-list-txt {
+  color: whitesmoke;
 }
 
 .flex {
