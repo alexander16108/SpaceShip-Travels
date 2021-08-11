@@ -54,9 +54,11 @@ const populate = () => {
   foot.append(footLi);
 };
 
+document.addEventListener('DOMContentLoaded', populate);
+
 const pokemon = [];
 
-document.addEventListener('DOMContentLoaded', populate, async () => {
+document.addEventListener('DOMContentLoaded', async () => {
   pokemon.push(
     await getPokemon(6),
     await getPokemon(7),
@@ -67,4 +69,3 @@ document.addEventListener('DOMContentLoaded', populate, async () => {
   );
   displayPokemon(pokemon);
 });
-

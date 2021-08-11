@@ -9,13 +9,15 @@ class PokemonContainer {
   }
 
   display() {
-    const PokeDisplay = grab('Pokemon-display');
+    const pokeDisplay = grab('Pokemon-display');
+    pokeDisplay.classList.add('grid-container');
+
     const container = newDiv;
-    container.classList.add('grid-container');
+    // container.classList.add('grid-item');
 
     const pokemonImg = newElem('img');
     pokemonImg.src = this.pokemonImage;
-    pokemonImg.classList.add('');
+    // pokemonImg.classList.add('');
 
     const pokemonName = newElem('p');
     pokemonName.classList.add('m-bot-1');
@@ -28,21 +30,21 @@ class PokemonContainer {
     likeButton.classList.add('far', 'fa-heart');
 
     const infoDiv = newDiv;
-    infoDiv.classList.add('flex', 'info-div-align');
+    // infoDiv.classList.add('flex', 'info-div-align');
     infoDiv.append(pokemonName, likeButton);
     const commentButton = newElem('button');
     commentButton.classList.add('m-top-1');
     commentButton.innerText = 'Comment';
 
     container.append(pokemonImg, infoDiv, numLikes, commentButton);
-    PokeDisplay.append(container);
+    pokeDisplay.append(container);
   }
 }
 
-const displayPokemon = (pokes) => {
-  pokes.forEach((poke) => {
+const displayPokemon = (pokemon) => {
+  pokemon.forEach((poke) => {
     const pokemonContainer = new PokemonContainer(
-      poke.image.original,
+      poke.sprites.other.dream_word,
       poke.name,
       0,
       poke.id,
@@ -51,4 +53,4 @@ const displayPokemon = (pokes) => {
   });
 };
 
-export default { displayPokemon };
+export default displayPokemon;
