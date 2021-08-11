@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
-import Logo from './pokeLogo.png';
+import Logo from './tools/pokeLogo.png';
 import { newElem, grab } from './support.js';
 import getPokemon from './api.js';
 import displayPokemon from './display.js';
