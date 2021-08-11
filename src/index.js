@@ -56,7 +56,7 @@ const populate = () => {
 
 const pokemon = [];
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', populate, async () => {
   pokemon.push(
     await getPokemon(6),
     await getPokemon(7),
@@ -68,4 +68,3 @@ document.addEventListener('DOMContentLoaded', async () => {
   displayPokemon(pokemon);
 });
 
-document.addEventListener('DOMContentLoaded', populate);
