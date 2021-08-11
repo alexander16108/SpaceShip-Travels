@@ -20,8 +20,8 @@ class PokemonContainer {
     pokemonImg.classList.add('pokemon-img');
 
     const pokemonName = newElem('p');
-    pokemonName.classList.add('m-bot-5');
-    pokemonName.innerText = this.pokemonName;
+    pokemonName.classList.add('m-bot-5', 'name-txt');
+    pokemonName.innerText = this.pokemonName.toUpperCase();
     const numLikes = newElem('p');
     numLikes.classList.add('m-bot-5');
     numLikes.innerText = this.pokemonLikes;
@@ -31,12 +31,12 @@ class PokemonContainer {
 
     const infoDiv = newDiv();
     infoDiv.classList.add('flex', 'info-div-align');
-    infoDiv.append(pokemonName, likeButton);
+    infoDiv.append(likeButton, numLikes);
     const commentButton = newElem('button');
-    commentButton.classList.add('m-top-5');
+    commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
     commentButton.innerText = 'Comment';
 
-    container.append(pokemonImg, infoDiv, numLikes, commentButton);
+    container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);
   }
 }
