@@ -15,7 +15,6 @@ nav {
 
 #logoImg {
   margin: 1rem 1.6rem;
-  
   height: 6rem;
   width: 11rem;
 }
@@ -37,7 +36,6 @@ nav {
 .nav-list-txt {
   color: whitesmoke;
 }
-
 
 .grid-container {
   display: grid;
@@ -61,7 +59,7 @@ nav {
 .pokemon-img {
   height: 7.5rem;
   width: 7.5rem;
-  margin: -1.9rem 15% 0 15% ;
+  margin: -1.9rem 15% 0 15%;
 }
 
 .info-div-align {
@@ -91,7 +89,7 @@ nav {
 }
 
 .m-bot-5 {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .m-right-1 {
@@ -103,7 +101,7 @@ nav {
 }
 
 .m-top-5 {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 /*****************
