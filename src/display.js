@@ -12,8 +12,8 @@ class PokemonContainer {
     const pokeDisplay = grab('Pokemon-display');
     pokeDisplay.classList.add('grid-container');
 
-    const container = newDiv;
-    // container.classList.add('grid-item');
+    const container = newDiv();
+    container.classList.add('grid-item');
 
     const pokemonImg = newElem('img');
     pokemonImg.src = this.pokemonImage;
@@ -29,8 +29,8 @@ class PokemonContainer {
     const likeButton = newElem('i');
     likeButton.classList.add('far', 'fa-heart');
 
-    const infoDiv = newDiv;
-    // infoDiv.classList.add('flex', 'info-div-align');
+    const infoDiv = newDiv();
+    infoDiv.classList.add('flex', 'info-div-align');
     infoDiv.append(pokemonName, likeButton);
     const commentButton = newElem('button');
     commentButton.classList.add('m-top-1');
@@ -44,7 +44,7 @@ class PokemonContainer {
 const displayPokemon = (pokemon) => {
   pokemon.forEach((poke) => {
     const pokemonContainer = new PokemonContainer(
-      poke.sprites.other.dream_word,
+      poke.sprites.other.dream_world.front_default,
       poke.name,
       0,
       poke.id,
