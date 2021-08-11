@@ -17,13 +17,13 @@ class PokemonContainer {
 
     const pokemonImg = newElem('img');
     pokemonImg.src = this.pokemonImage;
-    // pokemonImg.classList.add('');
+    pokemonImg.classList.add('pokemon-img');
 
     const pokemonName = newElem('p');
-    pokemonName.classList.add('m-bot-1');
+    pokemonName.classList.add('m-bot-5');
     pokemonName.innerText = this.pokemonName;
     const numLikes = newElem('p');
-    numLikes.classList.add('m-bot-1');
+    numLikes.classList.add('m-bot-5');
     numLikes.innerText = this.pokemonLikes;
 
     const likeButton = newElem('i');
@@ -33,7 +33,7 @@ class PokemonContainer {
     infoDiv.classList.add('flex', 'info-div-align');
     infoDiv.append(pokemonName, likeButton);
     const commentButton = newElem('button');
-    commentButton.classList.add('m-top-1');
+    commentButton.classList.add('m-top-5');
     commentButton.innerText = 'Comment';
 
     container.append(pokemonImg, infoDiv, numLikes, commentButton);

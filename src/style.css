@@ -47,12 +47,35 @@ nav {
   align-items: baseline;
 }
 
+.pokemon-img {
+  height: 7rem;
+  width: 7rem;
+  margin: 0% 15%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  margin: 3rem;
+}
+
+.grid-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 3rem;
+}
+
 .m-left-1 {
   margin-left: 1rem;
 }
 
 .m-bot-1 {
   margin-bottom: 1rem;
+}
+
+.m-bot-5 {
+  margin-bottom: .5rem;
 }
 
 .m-right-1 {
@@ -62,6 +85,11 @@ nav {
 .m-top-1 {
   margin-top: 1rem;
 }
+
+.m-top-5 {
+  margin-top: .5rem;
+}
+
 /*****************
 FOOTER SECTION
 *****************/
