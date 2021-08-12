@@ -25,4 +25,4 @@ const fetchLove = async () => {
   return JSON.parse(`{"likes": ${likes}}`);
 };
 
-export default fetchLove;
+export { fetchLove, pokemonLove };
