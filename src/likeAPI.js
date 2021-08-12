@@ -4,6 +4,7 @@ const involveBase = 'https://us-central1-involvement-api.cloudfunctions.net/caps
 const pokemonLove = async (pokemonId) => {
   const appId = 'CASRWGSYrSseBvOI0M1L';
   const response = await fetch(`${involveBase}/apps/${appId}/likes`, {
+    mode: 'no-cors',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
