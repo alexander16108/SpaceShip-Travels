@@ -6,15 +6,12 @@ class PokemonContainer {
     this.pokemonImage = pokemonImage;
     this.pokemonName = pokemonName;
     this.pokemonLikes = pokemonLikes;
-    // this.updateLikes = this.updateLikes.bind(this);
-    // this.updateLikes.numLikesDisplay = null;
+    this.updateLikes = this.updateLikes.bind(this);
+    this.updateLikes.numLikesDisplay = null;
     this.pokemonId = pokemonId;
   }
 
-  // updateLikes() {
-  //   this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` :
-  //  `${this.showLikes} Likes`;
-  // }
+  // 
 
   display() {
     const pokeDisplay = grab('Pokemon-display');
@@ -39,14 +36,6 @@ class PokemonContainer {
     const likeBtn = newElem('i');
     likeBtn.classList.add('far', 'fa-heart');
 
-    // likeBtn.addEventListener('click', async () => {
-    //   const status = await pokemonLove(this.pokemonId);
-    //   if (status === 201) {
-    //     this.showLikes += 1;
-    //     this.updateLikes();
-    //   }
-    // });
-
     const infoDiv = newDiv();
     infoDiv.classList.add('flex', 'info-div-align');
     infoDiv.append(likeBtn, numLikes);
@@ -62,7 +51,7 @@ class PokemonContainer {
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);
 
-    // this.updateLikes();
+    
   }
 }
 
