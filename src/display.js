@@ -1,4 +1,5 @@
 import { newElem, newDiv, grab } from './support.js';
+import openCommentPage from './commentPop.js';
 
 class PokemonContainer {
   constructor(pokemonImage, pokemonName, pokemonLikes, pokemonId) {
@@ -37,9 +38,7 @@ class PokemonContainer {
     commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
     commentButton.innerText = 'Comment';
 
-    commentButton.addEventListener('click', () => {
-      commentButton.classList.add('popup');
-    });
+    commentButton.addEventListener('click', () => openCommentPage(this.pokemonId));
 
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);

@@ -104,7 +104,7 @@ nav {
   margin-top: 0.5rem;
 }
 
-.modal {
+.comment-display {
   display: none;
   position: fixed;
   z-index: 1;
@@ -116,16 +116,23 @@ nav {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.active {
+.toggle-screen {
   display: block;
 }
 
-.modal-content {
+.central-popup {
   background-color: #fefefe;
   margin: 1% auto;
   padding: 2% 5%;
   border: 1px solid #888;
-  max-width: 50%;
+  /* max-width: 50%; */
+  width: 80wh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0%;
+  left: 30%;
 }
 
 .popup-image {
@@ -136,9 +143,11 @@ nav {
 .close {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 30px;
   font-size: 28px;
   font-weight: bold;
+  width: 0%;
+  height: 0%;
 }
 
 .close:hover,
