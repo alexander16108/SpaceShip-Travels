@@ -52,6 +52,10 @@ nav {
   margin: 3.7rem 0% 0% 20%;
 }
 
+.like-btn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
 .flex {
   display: flex;
 }
