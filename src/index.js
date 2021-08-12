@@ -20,7 +20,7 @@ const populate = () => {
   navLi.classList.add('list-style');
 
   const li1 = newElem('li');
-  li1.innerText = 'Pokemon';
+  li1.innerText = 'Pokemon(9)';
   li1.classList.add('nav-list-txt');
 
   const li2 = newElem('li');
