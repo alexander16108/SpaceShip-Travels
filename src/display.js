@@ -1,4 +1,4 @@
-import fetchLove from './likeAPI.js';
+import { fetchLove, pokemonLove } from './likeAPI.js';
 import { newElem, newDiv, grab } from './support.js';
 
 class PokemonContainer {
@@ -11,7 +11,9 @@ class PokemonContainer {
     this.pokemonId = pokemonId;
   }
 
-  // 
+  updateLikes() {
+    this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` : `${this.showLikes} Likes`;
+  }
 
   display() {
     const pokeDisplay = grab('Pokemon-display');
