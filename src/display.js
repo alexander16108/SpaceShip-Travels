@@ -17,7 +17,7 @@ class PokemonContainer {
 
   display() {
     const pokeDisplay = grab('Pokemon-display');
-    pokeDisplay.classList.add('grid-container');
+    pokeDisplay.classList.add('grid-container', 'm-bot-1');
 
     const container = newDiv();
     container.classList.add('grid-item');
