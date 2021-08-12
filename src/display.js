@@ -12,7 +12,8 @@ class PokemonContainer {
   }
 
   // updateLikes() {
-  //   this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` : `${this.showLikes} Likes`;
+  //   this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` :
+  //  `${this.showLikes} Likes`;
   // }
 
   display() {
@@ -71,8 +72,6 @@ const displayPokemon = async (pokemon) => {
     let numLikes = 0;
     numLikes = (result.likes.find((item) => item.item_id === poke.id)
       ? result.likes.find((item) => item.item_id === poke.id).likes : 0);
-console.log(numLikes);
-console.log(typeof numLikes);
     const pokemonContainer = new PokemonContainer(
       poke.sprites.other.dream_world.front_default,
       poke.name,
