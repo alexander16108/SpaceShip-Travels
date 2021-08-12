@@ -69,3 +69,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   );
   displayPokemon(pokemon);
 });
+
+module.exports = { populate };

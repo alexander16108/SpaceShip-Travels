@@ -3,4 +3,5 @@ const commentLoader = (data) => {
   para.innerHTML = `${data.creation_date} ${data.username}: ${data.comment}`;
   return para;
 };
+
 export default commentLoader;
