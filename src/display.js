@@ -1,4 +1,4 @@
-import fetchLove from './likeAPI.js';
+import { fetchLove, pokemonLove } from './likeAPI.js';
 import { newElem, newDiv, grab } from './support.js';
 
 class PokemonContainer {
@@ -6,15 +6,14 @@ class PokemonContainer {
     this.pokemonImage = pokemonImage;
     this.pokemonName = pokemonName;
     this.pokemonLikes = pokemonLikes;
-    // this.updateLikes = this.updateLikes.bind(this);
-    // this.updateLikes.numLikesDisplay = null;
+    this.updateLikes = this.updateLikes.bind(this);
+    this.updateLikes.numLikesDisplay = null;
     this.pokemonId = pokemonId;
   }
 
-  // updateLikes() {
-  //   this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` :
-  //  `${this.showLikes} Likes`;
-  // }
+  updateLikes() {
+    this.numLikesDisplay.innerText = this.pokemonLikes === 1 ? `${this.pokemonLikes} Like` : `${this.pokemonLikes} Likes`;
+  }
 
   display() {
     const pokeDisplay = grab('Pokemon-display');
@@ -39,13 +38,13 @@ class PokemonContainer {
     const likeBtn = newElem('i');
     likeBtn.classList.add('far', 'fa-heart');
 
-    // likeBtn.addEventListener('click', async () => {
-    //   const status = await pokemonLove(this.pokemonId);
-    //   if (status === 201) {
-    //     this.showLikes += 1;
-    //     this.updateLikes();
-    //   }
-    // });
+    likeBtn.addEventListener('click', async () => {
+      const status = await pokemonLove(this.pokemonId);
+      if (status === 201) {
+        this.pokemonLikes += 1;
+        this.updateLikes();
+      }
+    });
 
     const infoDiv = newDiv();
     infoDiv.classList.add('flex', 'info-div-align');
@@ -62,7 +61,7 @@ class PokemonContainer {
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);
 
-    // this.updateLikes();
+    this.updateLikes();
   }
 }
 
