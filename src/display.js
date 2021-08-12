@@ -37,10 +37,9 @@ class PokemonContainer {
     commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
     commentButton.innerText = 'Comment';
 
-    // commentButton.addEventListener('click', () => {
-    //   display();
-    //   onPressCommentsButton(id);
-    // })
+    commentButton.addEventListener('click', () => {
+      commentButton.classList.add('popup');
+    });
 
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);

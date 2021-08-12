@@ -1,6 +1,6 @@
 const baseUrl = 'https://pokeapi.co/api/v2';
-// const involveBase = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
-// const appId = 'CASRWGSYrSseBvOI0M1L';
+const involveBase = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+const appId = 'CASRWGSYrSseBvOI0M1L';
 
 const getPokemon = async (pokeId) => {
   const url = `${baseUrl}/pokemon/${pokeId}`;
@@ -9,4 +9,11 @@ const getPokemon = async (pokeId) => {
   return pokemon;
 };
 
-export default getPokemon;
+const getComments = async (pokeId) => {
+  const url = `${involveBase}/${appId}/comments?item_id=${pokeId}`;
+  let comments = await fetch(url);
+  comments = await comments.json();
+  return comments;
+};
+
+export default { getPokemon, getComments };
