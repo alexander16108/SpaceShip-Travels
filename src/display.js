@@ -47,12 +47,12 @@ class PokemonContainer {
 }
 
 const displayPokemon = (pokemon) => {
-  pokemon.forEach((pokes) => {
+  pokemon.forEach((poke) => {
     const pokemonContainer = new PokemonContainer(
-      pokes.sprites.other.dream_world.front_default,
-      pokes.name,
+      poke.sprites.other.dream_world.front_default,
+      poke.name,
       0,
-      pokes.id,
+      poke.id,
     );
     pokemonContainer.display();
   });
