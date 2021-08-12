@@ -3,7 +3,9 @@ import getPokemon from './api.js';
 
 // const addMoreComments = (ul, arr) => {
 //   arr.forEach((el) => {
-//     ul.innerHTML += `<li class="comment-list">${el.creation_date} ${el.username}: ${el.comment}</li>`;
+//     ul.innerHTML += `<li class="comment-list">
+// ${el.creation_date}
+//  ${el.username}: ${el.comment}</li>`;
 //   });
 // };
 
@@ -11,13 +13,14 @@ export default async function openCommentPage(pokeId) {
   const pokemonInfo = await getPokemon(pokeId);
   // const commentsInfo = await commentApis(pokeId);
   const popScreen = document.getElementById('comment-display');
-  popScreen.classList.add('popup');
+  popScreen.classList.add('open-popup');
+  // popScreen.style.display = 'block';
 
   popScreen.innerHTML = `
   <div class="central-popup">
   <div class="popup-items">
     <img
-      src="${pokemonInfo.image}"
+      src="${pokemonInfo.sprites.other.dream_world.front_default}"
       alt="shows"
       class="popup-image"
     />
@@ -27,8 +30,8 @@ export default async function openCommentPage(pokeId) {
   <h3 class="popup-title">${pokemonInfo.name}</h3>
   <div class="popup-info">
     <div class="pokemon-stats">
-      <h5>Nature : ${pokemonInfo.nature}</h5>
-      <h5>Ability : ${pokemonInfo.abitlty}</h5>
+      <h5> Weight : ${pokemonInfo.weight}</h5>
+      <h5> Height : ${pokemonInfo.height}</h5>
     </div>
   </div>
   <h4 class="comments-title">Comments</h4>
@@ -39,8 +42,11 @@ export default async function openCommentPage(pokeId) {
 </div>
     `;
   // const ul = document.getElementById('list-group');
-  // addMoreComments(ul);
+  // addMoreComments(ul, commentsInfo);
 
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => popScreen.classList.remove('popup'));
+  const closeButton = document.getElementsByClassName('close')[0];
+  closeButton.addEventListener('click', () => {
+    popScreen.classList.add('close-popup');
+    // document.body.style.backgroundColor = 'black';
+  });
 }

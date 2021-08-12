@@ -116,8 +116,12 @@ nav {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.toggle-screen {
+.open-popup {
   display: block;
+}
+
+.close-popup {
+  display: none;
 }
 
 .central-popup {
@@ -125,7 +129,6 @@ nav {
   margin: 1% auto;
   padding: 2% 5%;
   border: 1px solid #888;
-  /* max-width: 50%; */
   width: 80wh;
   height: 80vh;
   display: flex;
