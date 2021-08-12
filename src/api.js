@@ -16,4 +16,4 @@ const getComments = async (pokeId) => {
   return comments;
 };
 
-export default { getPokemon, getComments };
+export { getPokemon, getComments };
