@@ -67,13 +67,13 @@ class PokemonContainer {
 const displayPokemon = async (pokemon) => {
   const result = await fetchLove();
   pokemon.forEach((poke) => {
-    let love = 0;
-    love = result.likes.find((item) => item.item_id === pokemon.id)
+    let numLikes = 0;
+    numLikes = result.likes.find((item) => item.item_id === pokemon.id)
       ? result.likes.find((item) => item.item_id === pokemon.id).likes : 0;
     const pokemonContainer = new PokemonContainer(
       poke.sprites.other.dream_world.front_default,
       poke.name,
-      love,
+      numLikes,
       poke.id,
     );
     pokemonContainer.display();
