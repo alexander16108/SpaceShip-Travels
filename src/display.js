@@ -55,7 +55,6 @@ class PokemonContainer {
     commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
     commentButton.innerText = 'Comment';
 
-
     commentButton.addEventListener('click', () => openCommentPage(this.pokemonId));
 
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
