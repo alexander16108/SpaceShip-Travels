@@ -5,7 +5,14 @@ class PokemonContainer {
     this.pokemonImage = pokemonImage;
     this.pokemonName = pokemonName;
     this.pokemonLikes = `${pokemonLikes} Likes`;
+    this.updateLikes = this.updateLikes.bind(this);
+    this.updateLikes.numLikesDisplay = null;
     this.pokemonId = pokemonId;
+  }
+
+
+  updateLikes() {
+    this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` : `${this.showLikes} Likes`;
   }
 
   display() {
