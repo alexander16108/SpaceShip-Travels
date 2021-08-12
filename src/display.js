@@ -71,7 +71,7 @@ const displayPokemon = async (pokemon) => {
     let numLikes = 0;
     numLikes = (result.likes.find((item) => item.item_id === poke.id)
       ? result.likes.find((item) => item.item_id === poke.id).likes : 0);
-      const pokemonContainer = new PokemonContainer(
+    const pokemonContainer = new PokemonContainer(
       poke.sprites.other.dream_world.front_default,
       poke.name,
       numLikes,
