@@ -21,7 +21,7 @@ class PokemonContainer {
     pokeDisplay.classList.add('grid-container', 'm-bot-1');
 
     const container = newDiv();
-    container.classList.add('grid-item');
+    container.classList.add('grid-item', 'hover-item');
 
     const pokemonImg = newElem('img');
     pokemonImg.classList.add('pokemon-img');
@@ -37,7 +37,7 @@ class PokemonContainer {
     this.numLikesDisplay = numLikes;
 
     const likeBtn = newElem('i');
-    likeBtn.classList.add('far', 'fa-heart');
+    likeBtn.classList.add('far', 'fa-heart', 'like-btn');
 
     likeBtn.addEventListener('click', async () => {
       const status = await pokemonLove(this.pokemonId);
@@ -53,7 +53,7 @@ class PokemonContainer {
 
     const commentButton = newElem('button');
     commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
-    commentButton.innerText = 'Comment';
+    commentButton.innerText = 'COMMENT';
 
     commentButton.addEventListener('click', () => openCommentPage(this.pokemonId));
 
