@@ -82,4 +82,4 @@ const displayPokemon = async (pokemon) => {
 
 const pokeCount = (pokemon) => pokemon.length;
 
-module.exports = { displayPokemon, pokeCount };
+export { displayPokemon, pokeCount };
