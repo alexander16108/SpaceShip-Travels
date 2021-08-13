@@ -1,41 +1,37 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
-import Logo from './tools/pokeLogo.png';
+import Logo from './tools/pokeball_logo2.png';
 import { newElem, grab } from './support.js';
 import getPokemon from './api.js';
 import displayPokemon from './display.js';
 
 const populate = () => {
-  // logo
-  const logoDiv = grab('logo-div');
+  // Navbar
+  const navbar = grab('nav-anchor');
+  navbar.classList.add('flex');
+
   const logo = new Image();
   logo.id = 'logoImg';
   logo.src = Logo;
 
-  logoDiv.append(logo);
+  const pokeCount = newElem('p');
+  pokeCount.innerText = 'Pokemon(9)';
+  pokeCount.classList.add('nav-list-txt', 'nav-l');
 
-  // nav-list
-  const navLi = grab('nav-list');
-  navLi.classList.add('list-style');
+  const gym = newElem('p');
+  gym.innerText = 'Find a Gym';
+  gym.classList.add('nav-list-txt', 'nav-r');
 
-  const li1 = newElem('li');
-  li1.innerText = 'Pokemon';
-  li1.classList.add('nav-list-txt');
-
-  const li2 = newElem('li');
-  li2.innerText = 'Comments';
-  li2.classList.add('nav-list-txt');
-
-  navLi.append(li1, li2);
+  navbar.append(pokeCount, logo, gym);
 
   // footer
 
   const foot = grab('foot-anchor');
-  foot.classList.add('footer');
+  foot.classList.add('footer', 'm-top-1');
 
   const footLi = newElem('ul');
-  footLi.classList.add('flex', 'list-style', 'footerText');
+  footLi.classList.add('flex', 'list-style', 'footerText', 'm-top-3');
 
   const fLi1 = newElem('li');
   const footI = newElem('i');
