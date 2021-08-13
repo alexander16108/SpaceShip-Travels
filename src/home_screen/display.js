@@ -1,6 +1,6 @@
-import { fetchLove, pokemonLove } from './likeAPI.js';
-import { newElem, newDiv, grab } from './support.js';
-import openCommentPage from './commentPop.js';
+import { fetchLove, pokemonLove } from '../likeAPI.js';
+import { newElem, newDiv, grab } from '../support.js';
+import openCommentPage from '../commentPop.js';
 
 class PokemonContainer {
   constructor(pokemonImage, pokemonName, pokemonLikes, pokemonId) {
@@ -80,4 +80,6 @@ const displayPokemon = async (pokemon) => {
   });
 };
 
-export default displayPokemon;
+const pokeCount = (pokemon) => pokemon.length;
+
+module.exports = { displayPokemon, pokeCount };
