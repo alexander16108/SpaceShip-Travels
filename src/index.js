@@ -4,7 +4,7 @@ import './style.css';
 import Logo from './tools/pokeball_logo2.png';
 import { newElem, grab } from './support.js';
 import getPokemon from './api.js';
-import displayPokemon from './display.js';
+import displayPokemon from './home_screen/display.js';
 
 const populate = () => {
   // Navbar
