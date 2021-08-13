@@ -57,11 +57,14 @@ const pokemon = [];
 document.addEventListener('DOMContentLoaded', async () => {
   pokemon.push(
     await getPokemon(6),
-    await getPokemon(7),
+    await getPokemon(448),
     await getPokemon(25),
     await getPokemon(52),
-    await getPokemon(79),
-    await getPokemon(95),
+    await getPokemon(3),
+    await getPokemon(473),
+    await getPokemon(260),
+    await getPokemon(245),
+    await getPokemon(150),
   );
   displayPokemon(pokemon);
 });

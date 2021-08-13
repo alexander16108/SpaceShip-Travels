@@ -55,7 +55,7 @@ nav {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   width: 70%;
   margin-left: 12%;
 }
@@ -80,8 +80,8 @@ nav {
 }
 
 .pokemon-img {
-  height: 7.9rem;
-  width: 7.9rem;
+  height: 7.4rem;
+  width: 7.4rem;
   margin: -2.1rem 15% 0 15%;
 }
 
