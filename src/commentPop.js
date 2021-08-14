@@ -11,10 +11,9 @@ ${el.creation_date}
 
 export const openCommentPage = async (pokemonId) => {
   const pokemonInfo = await getPokemon(pokemonId);
-  const commentsInfo = await commentApis(pokemonId);
-  const popScreen = document.getElementById('pokemon-display');
-  popScreen.classList.add('open-popup');
-  // popScreen.style.display = 'block';
+  // const commentsInfo = await commentApis(pokemonId);
+  const popScreen = document.getElementById('comment-display');
+  popScreen.style.display = 'block';
 
   popScreen.innerHTML = `
   <div class="central-popup">
@@ -59,9 +58,9 @@ export const openCommentPage = async (pokemonId) => {
   const ul = document.getElementById('list-group');
   addMoreComments(ul, commentsInfo);
 
-  const closeButton = document.getElementsByClassName('close')[0];
+  const closeButton = document.querySelector('.close');
   closeButton.addEventListener('click', () => {
-    popScreen.classList.add('close-popup');
+    popScreen.style.display = 'none';
   });
   const name = document.querySelector('#name');
   const insight = document.querySelector('#insight');
