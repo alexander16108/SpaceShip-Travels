@@ -1,8 +1,8 @@
 const involveBase = 'https://us-central1-involvement-api.cloudfunctions.netcapstoneApi/';
 const appId = 'CASRWGSYrSseBvOI0M1L';
 
-const commentApis= async (pokemonId) => {
-  const url = `${involveBase}/apps/${appId}/comments?item_id=${pokemonId}`;
+const commentAPIs= async (pokemonId) => {
+  const url = `${involveBase}/${appId}/comments?item_id=${pokemonId}`;
   let comments = await fetch(url);
   comments = await comments.json();
   return comments;
@@ -23,4 +23,4 @@ const postComment = async (pokemonId, name, insight) => {
   });
   return response.json();
 };
-export { commentApis, postComment };
+export { commentAPIs, postComment };

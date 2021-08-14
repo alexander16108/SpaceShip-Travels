@@ -1,5 +1,5 @@
 import getPokemon from './api.js';
-import { commentApis, postComment } from './commentApi.js';
+import { commentAPIs, postComment } from './commentApi.js';
 
 const addMoreComments = (ul, arr) => {
   arr.forEach((el) => {
@@ -11,10 +11,9 @@ ${el.creation_date}
 
 export const openCommentPage = async (pokemonId) => {
   const pokemonInfo = await getPokemon(pokemonId);
-  // const commentsInfo = await commentApis(pokemonId);
+  // const commentsInfo = await commentAPIs(pokemonId);
   const popScreen = document.getElementById('comment-display');
   popScreen.style.display = 'block';
-
   popScreen.innerHTML = `
   <div class="central-popup">
   <div class="popup-items">
