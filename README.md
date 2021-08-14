@@ -30,7 +30,7 @@ This is the JavaScript Capstone project.
 
 ## Live Demo
 
-[Live Demo](https://vigilant-mayer-673e55.netlify.app/)
+[Live Demo](https://www.loom.com/share/806154e3bd1d4ae9890213a8d3f7b332)
 
 ### Setup
 
