@@ -152,22 +152,32 @@ nav {
 }
 
 .central-popup {
-  background-color: #fefefe;
-  margin: 1% auto;
-  padding: 2% 5%;
+  /* background-color: #fefefe; */
+  /* padding: 2% 5%; */
   border: 1px solid #888;
-  width: 80vw;
+  width: 60vw;
   height: 80vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 55% 5% 40%;
   position: fixed;
-  top: 0%;
+  top: 10%;
   left: 30%;
+  background-color: grey;
 }
 
 .popup-image {
-  border-radius: 5%;
-  width: 50%;
+  width: 60%;
+  justify-self: center;
+}
+
+.divider {
+  transform: rotate(90deg);
+ height: 0%;
+ width: 100%;
+  color: black;
+  margin: 0%;
+  padding: 0%;
 }
 
 .close {
@@ -185,6 +195,12 @@ nav {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.pokemon-stats {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr; 
 }
 
 .comment-list-item {
