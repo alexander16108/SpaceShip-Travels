@@ -1,4 +1,4 @@
-const involveBase = 'https://us-central1-involvement-api.cloudfunctions.netcapstoneApi/';
+const involveBase = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appId = 'CASRWGSYrSseBvOI0M1L';
 
 const commentAPIs= async (pokemonId) => {
@@ -14,6 +14,7 @@ const postComment = async (pokemonId, name, insight) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:8080/',
     },
     body: JSON.stringify({
       item_id: `${pokemonId}`,

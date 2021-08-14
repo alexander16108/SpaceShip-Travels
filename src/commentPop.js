@@ -11,7 +11,7 @@ ${el.creation_date}
 
 export const openCommentPage = async (pokemonId) => {
   const pokemonInfo = await getPokemon(pokemonId);
-  // const commentsInfo = await commentAPIs(pokemonId);
+  const commentsInfo = await commentAPIs(pokemonId);
   const popScreen = document.getElementById('comment-display');
   popScreen.style.display = 'block';
   popScreen.innerHTML = `
