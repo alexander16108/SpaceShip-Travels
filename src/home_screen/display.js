@@ -1,6 +1,5 @@
 import { fetchLove, pokemonLove } from '../likeAPI.js';
 import { newElem, newDiv, grab } from '../support.js';
-import openCommentPage from '../commentPop.js';
 
 class PokemonContainer {
   constructor(pokemonImage, pokemonName, pokemonLikes, pokemonId) {
