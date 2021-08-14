@@ -1,7 +1,7 @@
 const baseUrl = 'https://pokeapi.co/api/v2';
 
-const getPokemon = async (pokeId) => {
-  const url = `${baseUrl}/pokemon/${pokeId}`;
+const getPokemon = async (pokemonId) => {
+  const url = `${baseUrl}/pokemon/${pokemonId}`;
   let pokemon = await fetch(url);
   pokemon = await pokemon.json();
   return pokemon;

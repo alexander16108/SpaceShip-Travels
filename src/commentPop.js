@@ -12,7 +12,7 @@ ${el.creation_date}
 export const openCommentPage = async (pokemonId) => {
   const pokemonInfo = await getPokemon(pokemonId);
   const commentsInfo = await commentApis(pokemonId);
-  const popScreen = document.getElementById('comment-display');
+  const popScreen = document.getElementById('pokemon-display');
   popScreen.classList.add('open-popup');
   // popScreen.style.display = 'block';
 
@@ -69,7 +69,7 @@ export const openCommentPage = async (pokemonId) => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     postComment(pokemonId, name.value, insight.value);
-    addItemToList(ul, [
+    addMoreComments(ul, [
       {
         creation_date: '2021-08-14',
         username: name.value,
@@ -81,3 +81,5 @@ export const openCommentPage = async (pokemonId) => {
     insight.value = '';
   });
 }
+
+export default openCommentPage;
