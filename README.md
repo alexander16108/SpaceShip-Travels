@@ -6,6 +6,10 @@
 
 ![screenshot](./img/demo.png)
 
+## Video
+
+[watch here](https://www.loom.com/share/806154e3bd1d4ae9890213a8d3f7b332)
+
 This is the JavaScript Capstone project.
 
 ## There is only one person working on this project, as the other one was removed by Student Success team.
