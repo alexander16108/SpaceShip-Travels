@@ -16,6 +16,9 @@ This is the JavaScript Capstone project.
 - Testing the item counter
 - Styling and dependancies
 
+## Loom Video
+
+[Watch Here!](https://www.loom.com/share/f2c126f0f73342718907c45ccdd3280e)
 
 ## Built With
 

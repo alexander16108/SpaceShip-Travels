@@ -1,5 +1,4 @@
 const involveBase = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-// const appId = 'CASRWGSYrSseBvOI0M1L';
 
 const pokemonLove = async (pokemonId) => {
   const appId = 'CASRWGSYrSseBvOI0M1L';
