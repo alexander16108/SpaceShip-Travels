@@ -1,6 +1,5 @@
 import { fetchLove, pokemonLove } from '../likeAPI.js';
 import { newElem, newDiv, grab } from '../support.js';
-import openCommentPage from '../commentPop.js';
 
 class PokemonContainer {
   constructor(pokemonImage, pokemonName, pokemonLikes, pokemonId) {
@@ -54,8 +53,6 @@ class PokemonContainer {
     const commentButton = newElem('button');
     commentButton.classList.add('m-top-5', 'm-bot-5', 'coment-btn');
     commentButton.innerText = 'COMMENT';
-
-    commentButton.addEventListener('click', () => openCommentPage(this.pokemonId));
 
     container.append(pokemonImg, pokemonName, infoDiv, commentButton);
     pokeDisplay.append(container);
